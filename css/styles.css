@@ -1,0 +1,68 @@
+html,
+body {
+    font-family: Arial, sans-serif;
+    font-size: 1.2em;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 1.2em;
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+}
+
+ul,
+li {
+    list-style: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 1em;
+}
+
+label {
+    margin-left: 1em;
+}
+
+input {
+    margin-bottom: 1em;
+}
+
+#map,
+#listView {
+    width: 100%;
+    position: relative;
+}
+
+#listView {
+    height: 32%;
+    overflow: scroll;
+}
+
+#map {
+    height: 68%;
+}
+
+@media screen and (min-width: 602px) {
+    #map,
+    #listView {
+        height: 100%;
+        position: absolute;
+    }
+
+    #listView {
+        width: 25%;
+    }
+
+    #map {
+        width: 76%;
+        left: 24%;
+        top: 0;
+        bottom: 0;
+    }
+}

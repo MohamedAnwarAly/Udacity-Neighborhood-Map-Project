@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:900" rel="stylesheet">
+    <title>Neighborhood map project</title>
+</head>
+
+<body>
+    <div id="listView">
+        <h1>Places to visit in Stockholm</h1>
+        <label for="filter">search</label>
+        <input id="filter" data-bind="value: filter, valueUpdate: 'afterkeydown'">
+        <ul id="list" data-bind="foreach: filteredLocations">
+            <li data-bind="text: name, click: $root.displayInfoWindow"></li>
+        </ul>
+    </div>
+    <div id="map"></div>
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/knockout-3.4.2.js"></script>
+    <script src="js/app.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?&key=AIzaSyANuq1Hyg8jwrTr9aYTv1BjAuvZ9mWXNoo&v=3&callback=initMap&language=en" onerror="handleGoogleError()">
+    </script>
+</body>
+
+</html>
